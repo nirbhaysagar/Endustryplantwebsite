@@ -36,8 +36,9 @@ const ServiceCardsSection = () => {
   ];
 
   return (
-    <section className="py-24">
+    <section className="pt-10 pb-24">
       <div className="max-w-6xl mx-auto px-4 md:px-8 lg:px-12">
+        <h2 className="section-heading text-black dark:text-white text-4xl sm:text-5xl font-extrabold mb-12 text-left">What We Offer</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service, index) => (
             <div

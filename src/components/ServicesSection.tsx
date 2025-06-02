@@ -30,7 +30,7 @@ const ServicesSection = () => {
       <div className="max-w-6xl">
         <div className="mb-8">
           <p className="text-orange-500 dark:text-orange-400 text-sm font-inter font-medium tracking-wider uppercase mb-6">
-            WHY MIMIC DESIGN?
+            WHY ENDUSTRY PLANT?
           </p>
           <h2 className="text-black dark:text-white text-5xl md:text-6xl font-inter font-bold leading-tight">
             The Design Partner<br />

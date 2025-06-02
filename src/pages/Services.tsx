@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Rocket, Bot, Zap, Code, Smartphone, Award } from 'lucide-react';
 
 const services = [
@@ -35,21 +36,27 @@ const services = [
 ];
 
 const Services = () => (
-  <section className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center px-6 py-24">
-    <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-center">Our Services</h1>
-    <p className="max-w-2xl text-lg md:text-xl text-center text-gray-600 dark:text-gray-300 font-medium mb-10">
+  <section className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center px-4 sm:px-6 py-16 sm:py-24 relative">
+    <Link
+      to="/"
+      className="absolute left-4 sm:left-6 top-4 sm:top-6 text-xs sm:text-sm font-semibold bg-white text-black px-3 sm:px-4 py-2 rounded-full shadow hover:bg-gray-100 transition-colors border border-gray-200 z-10"
+    >
+      ← Back to Home
+    </Link>
+    <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 sm:mb-6 text-center">Our Services</h1>
+    <p className="max-w-xl sm:max-w-2xl text-base sm:text-lg md:text-xl text-center text-gray-600 dark:text-gray-300 font-medium mb-6 sm:mb-10">
       We help founders, startups, and teams launch, automate, and scale with:
     </p>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full max-w-5xl">
       {services.map((service, idx) => (
-        <div key={idx} className="bg-gray-100 dark:bg-gray-900/70 border border-gray-200 dark:border-gray-800 rounded-2xl p-8 flex flex-col items-center text-center shadow hover:shadow-lg transition-all">
-          <div className="mb-4">{service.icon}</div>
-          <h3 className="text-xl font-bold mb-2 text-black dark:text-white">{service.title}</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-base font-medium">{service.description}</p>
+        <div key={idx} className="bg-gray-100 dark:bg-gray-900/70 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center shadow hover:shadow-lg transition-all">
+          <div className="mb-3 sm:mb-4">{service.icon}</div>
+          <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2 text-black dark:text-white">{service.title}</h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm sm:text-base font-medium">{service.description}</p>
         </div>
       ))}
     </div>
-    <div className="max-w-2xl mt-12 text-center text-base md:text-lg text-gray-500 dark:text-gray-400 font-medium">
+    <div className="max-w-xl sm:max-w-2xl mt-8 sm:mt-12 text-center text-sm sm:text-base md:text-lg text-gray-500 dark:text-gray-400 font-medium">
       <span className="font-semibold text-black dark:text-white">Endustry Plant</span> is your unfair advantage for building MVPs, SaaS, AI, and automation. We offer modular services, full builds, and ongoing support—always fast, always premium.
     </div>
   </section>
